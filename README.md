@@ -1,11 +1,11 @@
 ---
-library_name: numpy
 tags:
 - experimental
 - generative-model
 - one-parameter
 - research
 - toy-model
+library_name: numpy
 ---
 
 # SpTn-Model-only-1P
@@ -16,9 +16,9 @@ SpTn-Model-only-1P is an experimental generative model designed to explore what 
 
 SpTn-Model-only-1P is a minimal research experiment rather than a general-purpose language model.
 
-The project investigates the behavior of machine-learning systems under an extreme parameter constraint: exactly one trainable parameter.
+The project investigates machine-learning behavior under an extreme parameter constraint: exactly one trainable parameter.
 
-The current implementation uses NumPy and contains several experimental scripts demonstrating one-parameter learning, generation, character sampling, benchmarking, and an interactive chat demo.
+The current implementation uses NumPy and contains experimental scripts for one-parameter learning, generation, character sampling, benchmarking, and an interactive chat demonstration.
 
 ## Key Properties
 
@@ -26,7 +26,6 @@ The current implementation uses NumPy and contains several experimental scripts 
 - Framework: NumPy
 - Model type: Experimental one-parameter generative model
 - Status: Research / experimental
-- Hardware requirement: Minimal
 - Language model capability: No
 
 ## Intended Use
@@ -49,12 +48,6 @@ Generated text may be meaningless or incoherent.
 
 Benchmark results in this repository measure experimental NumPy operations and should not be interpreted as LLM inference benchmarks.
 
-## Training
-
-The model uses simple numerical optimization with NumPy.
-
-The core experiment demonstrates learning from a small numerical dataset using exactly one trainable parameter.
-
 ## Interactive Chat
 
 Run:
@@ -64,19 +57,6 @@ Run:
 Type your message after `You:`.
 
 Type `exit` to quit.
-
-The chat script is an experimental demonstration and should not be considered a conventional chatbot or language model.
-
-## Evaluation
-
-The repository contains experimental tests for:
-
-- One-parameter optimization
-- Character generation
-- Random generation speed
-- Parameter capacity experiments
-
-These results are exploratory and are not directly comparable with standard language-model benchmarks.
 
 ## Repository
 
