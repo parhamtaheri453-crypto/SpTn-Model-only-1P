@@ -7,7 +7,7 @@ tags:
 - one-parameter
 - research
 - toy-model
-  library_name: numpy
+library_name: numpy
 
 ---
 
