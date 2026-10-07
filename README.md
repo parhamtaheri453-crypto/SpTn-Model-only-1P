@@ -1,63 +1,99 @@
+---
+library_name: numpy
+tags:
+- experimental
+- generative-model
+- one-parameter
+- research
+- toy-model
+---
+
 # SpTn-Model-only-1P
 
-An experimental generative model with exactly **1 trainable parameter**.
+SpTn-Model-only-1P is an experimental generative model designed to explore what can be achieved with exactly one trainable parameter.
 
-## Goal
+## Model Description
 
-The goal of SpTn-Model-only-1P is to explore how much generative behavior can be achieved with an extremely small number of trainable parameters.
+SpTn-Model-only-1P is a minimal research experiment rather than a general-purpose language model.
 
-## Current Version
+The project investigates the behavior of machine-learning systems under an extreme parameter constraint: exactly one trainable parameter.
 
-- Trainable parameters: **1**
-- Parameter type: `float32`
-- Raw parameter storage: **4 bytes**
-- Framework: **NumPy**
-- Training: From scratch
-- Generation benchmark: **10,000 characters**
-- Measured generation speed: **76,726 characters/second**
+The current implementation uses NumPy and contains several experimental scripts demonstrating one-parameter learning, generation, character sampling, benchmarking, and an interactive chat demo.
 
-## Experiments
+## Key Properties
 
-The project contains several experiments exploring:
+- Trainable parameters: 1
+- Framework: NumPy
+- Model type: Experimental one-parameter generative model
+- Status: Research / experimental
+- Hardware requirement: Minimal
+- Language model capability: No
 
-- One-parameter training
-- Character generation
-- Text generation
-- Parameter capacity
-- Generation speed
-- Extremely small model storage
+## Intended Use
 
-## Important Note
+This project is intended for:
 
-This is an experimental project and is **not a competitive language model**.
+- Educational experiments
+- Research into extremely low-parameter models
+- Exploring parameter capacity
+- Understanding simple optimization and generation
+- Experimenting with minimal machine-learning architectures
 
-The purpose is to investigate the practical limits of a model with only one trainable parameter.
+## Limitations
 
-## Roadmap
+This is not a production language model.
 
-SpTn is planned as a parameter-scaling experiment:
+The interactive chat implementation is an experimental demonstration based on a single scalar parameter and random character sampling. It does not have the language understanding or generation capabilities of modern LLMs.
 
-```text
-1P
-↓
-100P
-↓
-1K
-↓
-10K
-↓
-100K
-↓
-1M
-↓
-10M
+Generated text may be meaningless or incoherent.
+
+Benchmark results in this repository measure experimental NumPy operations and should not be interpreted as LLM inference benchmarks.
+
+## Training
+
+The model uses simple numerical optimization with NumPy.
+
+The core experiment demonstrates learning from a small numerical dataset using exactly one trainable parameter.
 
 ## Interactive Chat
 
-Run the experimental one-parameter chat:
+Run:
 
     python chat.py
 
 Type your message after `You:`.
 
 Type `exit` to quit.
+
+The chat script is an experimental demonstration and should not be considered a conventional chatbot or language model.
+
+## Evaluation
+
+The repository contains experimental tests for:
+
+- One-parameter optimization
+- Character generation
+- Random generation speed
+- Parameter capacity experiments
+
+These results are exploratory and are not directly comparable with standard language-model benchmarks.
+
+## Repository
+
+GitHub:
+https://github.com/parhamtaheri453-crypto/SpTn-Model-only-1P
+
+Hugging Face:
+https://huggingface.co/KtiyaKK/SpTn-Model-only-1P
+
+## Roadmap
+
+Future experiments may scale the parameter count:
+
+1P → 100P → 1K → 10K → 100K → 1M → 10M
+
+The goal is to study how model capability changes as the number of trainable parameters increases.
+
+## Disclaimer
+
+SpTn-Model-only-1P is an experimental research project. Results should be interpreted within the limitations described above.
