@@ -51,3 +51,13 @@ SpTn is planned as a parameter-scaling experiment:
 1M
 ↓
 10M
+
+## Interactive Chat
+
+Run the experimental one-parameter chat:
+
+    python chat.py
+
+Type your message after `You:`.
+
+Type `exit` to quit.
