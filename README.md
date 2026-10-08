@@ -42,82 +42,90 @@ The vocabulary and feature function are fixed and are not trainable parameters.
 
 ### Hugging Face
 
-Download `sp_tn_1p.npz` from the **Files and versions** section.
+Download the model directly:
 
-### GitHub
+```bash
+wget "https://huggingface.co/KtiyaKK/SpTn-Model-only-1P/resolve/main/sp_tn_1p.npz?download=true"
+
+Download chat.py:
+
+wget "https://raw.githubusercontent.com/parhamtaheri453-crypto/SpTn-Model-only-1P/main/chat.py"
+
+Then run:
+
+python chat.py
+
+GitHub
 
 Download the repository or the required files from GitHub.
 
 No Git installation is required if the files are downloaded manually.
 
-## Installation
+Installation
 
 Install NumPy:
 
-`pip install numpy`
+pip install numpy
 
-## Quick Start
+Quick Start
 
 Download these two files:
 
-- `sp_tn_1p.npz`
-- `chat.py`
+- sp_tn_1p.npz
+- chat.py
 
 Place them in the same directory.
 
 Run:
 
-`python chat.py`
+python chat.py
 
 Example:
 
-`You: hello`
-
-`Model: helloenemts aonddsoc xroxoe exhxnyyscdlhoahmtlnphlmwxypo`
+You: hello
+Model: helloenemts aonddsoc xroxoe exhxnyyscdlhoahmtlnphlmwxypo
 
 The generated text is experimental and is not intended to be meaningful natural language.
 
-## Load the Model
+Load the Model
 
 To verify and load the model:
 
-`python load_model.py`
+python load_model.py
 
 Expected output:
 
-`SpTn-Model-only-1P`
+SpTn-Model-only-1P
+Trainable parameters: 1
+Parameter: ...
+Vocabulary size: ...
+Model loaded successfully.
 
-`Trainable parameters: 1`
-
-`Parameter: ...`
-
-`Vocabulary size: ...`
-
-`Model loaded successfully.`
-
-## Training
+Training
 
 The model can be trained with:
 
-`python save_model.py`
+python save_model.py
 
-This trains the single parameter and saves the resulting model to `sp_tn_1p.npz`.
+This trains the single parameter and saves the resulting model to:
 
-## Architecture
+sp_tn_1p.npz
 
-SpTn-Model-only-1P contains exactly one trainable scalar: `w`.
+Architecture
+
+SpTn-Model-only-1P contains exactly one trainable scalar: w.
 
 The model uses a fixed character vocabulary and a fixed feature function.
 
-Only `w` is updated during training.
+Only w is updated during training.
 
-The generation process uses the trained value of `w` to calculate character probabilities.
+The generation process uses the trained value of w to calculate character probabilities.
 
-## Important Limitations
+Important Limitations
 
 SpTn-Model-only-1P is an experimental research project.
 
-It is **not** a general-purpose language model.
+It is not a general-purpose language model.
 
 The model does not understand natural language or the semantic meaning of the user's input.
 
@@ -127,21 +135,21 @@ The extremely small parameter count severely limits the model's capacity.
 
 The project is intended to explore parameter efficiency and extremely low-parameter generative systems.
 
-## Roadmap
+Roadmap
 
 The project will investigate progressively larger parameter counts:
 
-**1P → 100P → 1K → 10K → 100K → 1M → 10M**
+1P → 100P → 1K → 10K → 100K → 1M → 10M
 
 The goal is to study how generative behavior changes as the number of trainable parameters increases.
 
-## Repository
+Repository
 
-**GitHub:** https://github.com/parhamtaheri453-crypto/SpTn-Model-only-1P
+GitHub: https://github.com/parhamtaheri453-crypto/SpTn-Model-only-1P
 
-**Hugging Face:** https://huggingface.co/KtiyaKK/SpTn-Model-only-1P
+Hugging Face: https://huggingface.co/KtiyaKK/SpTn-Model-only-1P
 
-## Disclaimer
+Disclaimer
 
 SpTn-Model-only-1P is an experimental project.
 
