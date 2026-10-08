@@ -30,7 +30,7 @@ The model contains exactly one trainable parameter: `w`.
 
 The parameter is trained using gradient descent.
 
-During generation:
+During generation, the process is:
 
 **Input character → Fixed feature function → w → Character probabilities → Generated character**
 
@@ -40,92 +40,91 @@ The vocabulary and feature function are fixed and are not trainable parameters.
 
 ## Download
 
-### Hugging Face
+### Download the Model
 
-Download the model directly:
+You can download the model directly with:
 
-```bash
-wget "https://huggingface.co/KtiyaKK/SpTn-Model-only-1P/resolve/main/sp_tn_1p.npz?download=true"
+`wget "https://huggingface.co/KtiyaKK/SpTn-Model-only-1P/resolve/main/sp_tn_1p.npz?download=true"`
 
-Download chat.py:
+### Download chat.py
 
-wget "https://raw.githubusercontent.com/parhamtaheri453-crypto/SpTn-Model-only-1P/main/chat.py"
+Download the chat program directly with:
+
+`wget "https://raw.githubusercontent.com/parhamtaheri453-crypto/SpTn-Model-only-1P/main/chat.py"`
 
 Then run:
 
-python chat.py
+`python chat.py`
 
-GitHub
+Both files should be placed in the same directory.
 
-Download the repository or the required files from GitHub.
-
-No Git installation is required if the files are downloaded manually.
-
-Installation
+## Installation
 
 Install NumPy:
 
-pip install numpy
+`pip install numpy`
 
-Quick Start
+## Quick Start
 
-Download these two files:
+Download the model:
 
-- sp_tn_1p.npz
-- chat.py
+`wget "https://huggingface.co/KtiyaKK/SpTn-Model-only-1P/resolve/main/sp_tn_1p.npz?download=true"`
 
-Place them in the same directory.
+Download `chat.py`:
+
+`wget "https://raw.githubusercontent.com/parhamtaheri453-crypto/SpTn-Model-only-1P/main/chat.py"`
 
 Run:
 
-python chat.py
+`python chat.py`
 
 Example:
 
-You: hello
-Model: helloenemts aonddsoc xroxoe exhxnyyscdlhoahmtlnphlmwxypo
+`You: hello`
+
+`Model: helloenemts aonddsoc xroxoe`
 
 The generated text is experimental and is not intended to be meaningful natural language.
 
-Load the Model
+## Load the Model
 
 To verify and load the model:
 
-python load_model.py
+`python load_model.py`
 
-Expected output:
+Expected output includes:
 
-SpTn-Model-only-1P
-Trainable parameters: 1
-Parameter: ...
-Vocabulary size: ...
-Model loaded successfully.
+`SpTn-Model-only-1P`
 
-Training
+`Trainable parameters: 1`
+
+`Model loaded successfully.`
+
+## Training
 
 The model can be trained with:
 
-python save_model.py
+`python save_model.py`
 
 This trains the single parameter and saves the resulting model to:
 
-sp_tn_1p.npz
+`sp_tn_1p.npz`
 
-Architecture
+## Architecture
 
-SpTn-Model-only-1P contains exactly one trainable scalar: w.
+SpTn-Model-only-1P contains exactly one trainable scalar: `w`.
 
 The model uses a fixed character vocabulary and a fixed feature function.
 
-Only w is updated during training.
+Only `w` is updated during training.
 
-The generation process uses the trained value of w to calculate character probabilities.
+The generation process uses the trained value of `w` to calculate character probabilities.
 
-Important Limitations
+## Important Limitations
 
 SpTn-Model-only-1P is an experimental research project.
 
-It is not a general-purpose language model.
+It is **not** a general-purpose language model.
 
 The model does not understand natural language or the semantic meaning of the user's input.
 
@@ -135,21 +134,25 @@ The extremely small parameter count severely limits the model's capacity.
 
 The project is intended to explore parameter efficiency and extremely low-parameter generative systems.
 
-Roadmap
+## Roadmap
 
 The project will investigate progressively larger parameter counts:
 
-1P → 100P → 1K → 10K → 100K → 1M → 10M
+**1P → 100P → 1K → 10K → 100K → 1M → 10M**
 
 The goal is to study how generative behavior changes as the number of trainable parameters increases.
 
-Repository
+## Repository
 
-GitHub: https://github.com/parhamtaheri453-crypto/SpTn-Model-only-1P
+GitHub:
 
-Hugging Face: https://huggingface.co/KtiyaKK/SpTn-Model-only-1P
+https://github.com/parhamtaheri453-crypto/SpTn-Model-only-1P
 
-Disclaimer
+Hugging Face:
+
+https://huggingface.co/KtiyaKK/SpTn-Model-only-1P
+
+## Disclaimer
 
 SpTn-Model-only-1P is an experimental project.
 
